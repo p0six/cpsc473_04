@@ -30,9 +30,9 @@
     });
   };
 
-  FormHandler.prototype.addInputHandler = function (fn) {
+  FormHandler.prototype.addInputHandler = function(fn) {
     console.log('Setting input handler for form');
-    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+    this.$formElement.on('input', '[name="emailAddress"]', function(event) {
       var emailAddress = event.target.value;
       var message = '';
       if (fn(emailAddress)) {

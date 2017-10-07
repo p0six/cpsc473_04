@@ -19,7 +19,7 @@
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   var formHandler = new FormHandler(FORM_SELECTOR);
 
-  formHandler.addSubmitHandler(function (data) {
+  formHandler.addSubmitHandler(function(data) {
     myTruck.createOrder(data);
     checkList.addRow(data);
   });
