@@ -16,6 +16,7 @@
   var myTruck = new Truck('ncc-1701', remoteDS);
   window.myTruck = myTruck;
   var checkList = new CheckList(CHECKLIST_SELECTOR);
+  window.checkList = checkList; // allows us to populate from within our remoteDS module.
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   var formHandler = new FormHandler(FORM_SELECTOR);
 

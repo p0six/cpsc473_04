@@ -9,6 +9,14 @@
       throw new Error('No remote URL supplied.');
     }
     this.serverUrl = url;
+
+    // Populate the checkList with any data already present in our backend.
+    this.getAll(function(obj) {
+      obj.forEach(function(element) {
+        window.checkList.addRow(element);
+        orderMap.push(element);
+      });
+    });
   }
 
   RemoteDataStore.prototype.add = function(key, val) {

@@ -25,6 +25,8 @@
   };
 
   CheckList.prototype.addRow = function(coffeeOrder) {
+    console.log('my coffee order: ');
+    console.log(coffeeOrder);
     // Remove any existing rows that match the email address
     this.removeRow(coffeeOrder.emailAddress);
 
@@ -46,7 +48,6 @@
     var $div = $('<div></div>', {
       'data-coffee-order': 'checkbox',
       'class': 'checkbox'
-
     });
 
     this.$element = $div;
